@@ -1,0 +1,573 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Screens.HomeActivity">
+
+    <LinearLayout
+        android:id="@+id/layoutTopHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/round_bottom"
+        android:backgroundTint="@color/main_color"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:id="@+id/layoutTopHeaderContent"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="5dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1">
+
+                    <TextView
+                        android:id="@+id/welcome"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/welcome"
+                        android:textColor="@color/white"
+                        android:fontFamily="@font/poppins"
+                        android:textSize="14sp"/>
+
+                    <TextView
+                        android:id="@+id/txtCustomerName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/welcome"
+                        android:fontFamily="@font/poppins_bold"
+                        android:textColor="@color/white"
+                        android:textSize="24sp"
+                        android:layout_marginEnd="5dp"
+                        android:translationY="-8dp"/>
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="4">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardAvatar"
+                        android:layout_width="60dp"
+                        android:layout_height="60dp"
+                        android:layout_margin="5dp"
+                        app:cardCornerRadius="100dp"
+                        android:layout_centerInParent="true"
+                        style="@style/Widget.Material3.CardView.Filled">
+
+                        <ImageView
+                            android:id="@+id/imgAvatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:src="@drawable/avatar"
+                            android:visibility="invisible"
+                            android:scaleType="centerCrop"/>
+
+                        <TextView
+                            android:id="@+id/txtAvatar"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="AA"
+                            android:fontFamily="@font/poppins_bold"
+                            android:textColor="@color/white"
+                            android:textSize="30sp"
+                            android:visibility="gone"
+                            android:layout_gravity="center"
+                            android:textAlignment="center"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/cardLocation"
+            style="@style/Widget.Material3.CardView.Filled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="@color/white"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            android:layout_marginBottom="20dp"
+            app:cardCornerRadius="20dp"
+            app:cardElevation="8dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:padding="5dp">
+
+                <pl.droidsonroids.gif.GifImageView
+                    android:id="@+id/imgLocationPin"
+                    android:layout_width="30dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:src="@drawable/location" />
+
+                <TextView
+                    android:id="@+id/txtLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerVertical="true"
+                    android:layout_marginStart="5dp"
+                    android:layout_marginEnd="5dp"
+                    android:layout_toEndOf="@+id/imgLocationPin"
+                    android:fontFamily="@font/poppins"
+                    android:textColor="@color/black"
+                    android:textSize="12sp" />
+
+            </RelativeLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:scrollbars="none"
+        android:layout_below="@id/layoutTopHeader">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardRequestHelp"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        style="@style/Widget.Material3.CardView.Filled">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/question"
+                            android:padding="10dp"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/request_help"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardMakeBooking"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        style="@style/Widget.Material3.CardView.Filled">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/timetable"
+                            android:padding="10dp"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/make_booking"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardNearbyGarage"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        style="@style/Widget.Material3.CardView.Filled">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/work"
+                            android:padding="10dp"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearby_garages"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        style="@style/Widget.Material3.CardView.Filled">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/shop"
+                            android:padding="10dp"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/nearby_shops"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardMyEmergency"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        style="@style/Widget.Material3.CardView.Filled">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/ask_question"
+                            android:padding="10dp"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_request"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardMyBooking"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        style="@style/Widget.Material3.CardView.Filled">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/calendar"
+                            android:padding="10dp"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_booking"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardChat"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        style="@style/Widget.Material3.CardView.Filled">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/chat"
+                            android:padding="10dp"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/messages_and_chat"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:layout_margin="10dp">
+
+                    <com.google.android.material.card.MaterialCardView
+                        android:id="@+id/cardProfile"
+                        android:layout_width="50dp"
+                        android:layout_height="50dp"
+                        app:cardCornerRadius="10dp"
+                        app:cardElevation="8dp"
+                        android:backgroundTint="@color/white"
+                        android:layout_marginStart="10dp"
+                        android:layout_marginEnd="10dp"
+                        android:layout_gravity="center"
+                        style="@style/Widget.Material3.CardView.Filled">
+
+                        <ImageView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:src="@drawable/avatar"
+                            android:padding="10dp"/>
+
+                    </com.google.android.material.card.MaterialCardView>
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/my_nprofile"
+                        android:textColor="@color/black"
+                        android:fontFamily="@font/poppins"
+                        android:textAlignment="center"
+                        android:layout_gravity="center"
+                        android:layout_marginTop="10dp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/top_rated_garages"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:layout_centerVertical="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:backgroundTint="@color/main_color"
+                    android:fontFamily="@font/poppins"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="12sp"
+                    android:text="See More" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recyclerviewTopGarages"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:id="@+id/txtNoGaragesFound"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Garages Found !\nPlease Try Again Later."
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:textAlignment="center"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_margin="20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/top_rated_shops"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:layout_centerVertical="true"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:backgroundTint="@color/main_color"
+                    android:fontFamily="@font/poppins"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentEnd="true"
+                    android:textSize="12sp"
+                    android:text="See More" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="No Shops Found !\nPlease Try Again Later."
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins"
+                    android:textAlignment="center"
+                    android:layout_centerInParent="true"/>
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

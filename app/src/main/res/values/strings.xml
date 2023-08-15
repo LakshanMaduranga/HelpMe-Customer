@@ -1,0 +1,37 @@
+<resources>
+    <string name="app_name">HelpMe</string>
+    <string name="welcome">Welcome,</string>
+    <string name="customer_name">Customer Name</string>
+    <string name="email_address">Email Address</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="first_name">First Name</string>
+    <string name="last_name">Last Name</string>
+    <string name="identity_card_number">Identity Card Number</string>
+    <string name="skip_form_for_now">Skip Form for now >></string>
+    <string name="request_help">Request\nHelp</string>
+    <string name="make_booking">Make\nBooking</string>
+    <string name="nearby_garages">Nearby\nGarages</string>
+    <string name="nearby_shops">Nearby\nShops</string>
+    <string name="top_rated_garages">Top Rated Garages</string>
+    <string name="top_rated_shops">Top Rated Shops</string>
+    <string name="home">Home</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="profile">Profile</string>
+    <string name="chat">Chat</string>
+    <string name="example_gmail_com">example@gmail.com</string>
+    <string name="emergency_help">Emergency Help</string>
+    <string name="notice">Fill the form below to request emergency help. Garage will be notified and will contact you shortly after receiving your request accepted.</string>
+    <string name="issue_title_what_is_the_issue">Issue Title (What is the issue?) *</string>
+    <string name="describe_the_issue_in_detail">Describe the issue in detail *</string>
+    <string name="current_location_you_are_at">Current Location You Are At</string>
+    <string name="your_location">Your Location</string>
+    <string name="check_your_location_here">Check Your Location Here</string>
+    <string name="write_a_comment">Write a Comment</string>
+    <string name="my_request">My Requests</string>
+    <string name="my_booking">My\nBooking</string>
+    <string name="messages_and_chat">Messages and Chat</string>
+    <string name="my_nprofile">My\nProfile</string>
+    <string name="booking_note">Please fill the form below to book a new appointment. All fields are required. Once you submit the form, Garage will approve your appointment and you will be notified in the \'My Bookings\' section.</string>
+</resources>
